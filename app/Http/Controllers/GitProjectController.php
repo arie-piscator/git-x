@@ -8,15 +8,15 @@ use Illuminate\Http\JsonResponse;
 final class GitProjectController
 {
     /** @var GitProjectApi */
-    protected $gitProjectService;
+    protected $gitProjectApi;
 
-    public function __construct(GitProjectApi $gitProjectService)
+    public function __construct(GitProjectApi $gitProjectApi)
     {
-        $this->gitProjectService = $gitProjectService;
+        $this->gitProjectApi = $gitProjectApi;
     }
 
     public function index(): JsonResponse
     {
-        return response()->json($this->gitProjectService->index());
+        return response()->json($this->gitProjectApi->index());
     }
 }
