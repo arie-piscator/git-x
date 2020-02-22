@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            'App\Contracts\Services\Api\Git\GitProjectServiceInterface',
+            'App\Contracts\Services\Api\Git\GitProjectApi',
             'App\Services\Api\GitHub\GitHubProjectApi'
         );
 
